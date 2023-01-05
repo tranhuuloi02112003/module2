@@ -6,7 +6,6 @@ public class Test {
         shapes[0] = new Circle(5, "Red", true);
         shapes[1] = new Rectangle(6, 4, "Blu", false);
         shapes[2] = new Squares("Red", true, 4);
-
         System.out.println("Trước khi thay đổi");
         for (Shape s : shapes) {
             System.out.println(s.toString());
