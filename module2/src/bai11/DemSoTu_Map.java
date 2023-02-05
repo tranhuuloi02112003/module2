@@ -10,19 +10,19 @@ public class DemSoTu_Map {
         System.out.println("Nhập chuỗi bất kì: ");
         String string = sc.nextLine().toLowerCase();
 
-        String[] newString = string.split(" ");
+        String[] newArrString = string.split(" ");
         //Kiểm tra xem trong map có key này hay chưa. Nếu có đẩy key này vào map và tăng value
         // (số lượng từ) lên 1 Nếu key này chưa có trong map thì đẩy key vào map mặc định gán value là 1.
-        System.out.println(Arrays.toString(newString));
+        System.out.println(Arrays.toString(newArrString));
 //        int count = 1;
 
         TreeMap<String, Integer> treeMap = new TreeMap<>();
 
-        for (int i = 0; i < newString.length; i++) {
-            if (treeMap.containsKey(newString[i])) {
-                treeMap.put(newString[i], treeMap.get(newString[i]) + 1);
+        for (int i = 0; i < newArrString.length; i++) {
+            if (treeMap.containsKey(newArrString[i])) {
+                treeMap.put(newArrString[i], treeMap.get(newArrString[i]) + 1);
             } else {
-                treeMap.put(newString[i], 1);
+                treeMap.put(newArrString[i], 1);
             }
         }
         System.out.println(treeMap);
